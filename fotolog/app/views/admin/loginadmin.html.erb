@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Custom Login Form Styling</title>
+        <meta name="description" content="Custom Login Form Styling with CSS3" />
+        <meta name="keywords" content="css3, login, form, custom, input, submit, button, html5, placeholder" />
+        <meta name="author" content="Codrops" />
+        <link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="/static/fotolog/app/assets/css/style.css" />
+		<script src="/static/fotolog/app/assets/js/modernizr.custom.63321.js"></script>
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+		<!--[if lte IE 7]><style>.main{display:none;} .support-note .note-ie{display:block;}</style><![endif]-->
+		<style>
+			@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,700);
+			body {
+				background: #563c55 url(images/blurred.jpg) no-repeat center top;
+				-webkit-background-size: cover;
+				-moz-background-size: cover;
+				background-size: cover;
+			}
+			.container > header h1,
+			.container > header h2 {
+				color: #fff;
+				text-shadow: 0 1px 1px rgba(0,0,0,0.7);
+			}
+		</style>
+    </head>
+    <body>
+       		    <!-- Navigation -->
+
+	<nav class="navbar navbar-inverse">
+
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-9">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		     <a href="/" class="btn btn-info btn-lg">
+					  <span class="glyphicon glyphicon-home"></span> Home
+					</a>
+		    </div>
+
+
+			<form class="navbar-form navbar-right" role="search">
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
+		      <ul class="nav navbar-nav">
+		        <li><a class="navbar-brand" href="/usuario/loginuser">Login user</a></li>
+		        <li><a class="navbar-brand" href="/usuario/registro">Registrar</a></li>
+		        <li><a class="navbar-brand" href="/admin/loginadmin">Login admin</a></li>
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		     </form>
+    </nav>
+
+ 
+ 
+			
+			<section class="main">
+				<form class="form-3">
+				    <p class="clearfix">
+				        <label for="login">Username</label>
+				        <input type="text" name="login" id="login" placeholder="Username">
+				    </p>
+				    <p class="clearfix">
+				        <label for="password">Password</label>
+				        <input type="password" name="password" id="password" placeholder="Password"> 
+				    </p>
+				    <p class="clearfix">
+				        <input type="checkbox" name="remember" id="remember">
+				        <label for="remember">Remember me</label>
+				    </p>
+				    <p class="clearfix">
+				        <input type="submit" name="submit" value="Sign in">
+				    </p>       
+				</form>​
+			</section>
+			
+        </div>
+    </body>
+</html>
