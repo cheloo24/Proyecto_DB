@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fecha_comentario: 2015-06-18 22:11:13
+  texto_comentario: MyText
+
+two:
+  fecha_comentario: 2015-06-18 22:11:13
+  texto_comentario: MyText
