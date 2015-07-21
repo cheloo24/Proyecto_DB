@@ -1,0 +1,28 @@
+<%= form_for([@foto,@calificacion]) do |f| %>
+  <% if @calificacion.errors.any? %>
+    <div id="error_explanation">
+      <h2>Se ha encontrado :<%= pluralize(@calificacion.errors.count, "error") %> </h2>
+
+      <ul>
+      <% @calificacion.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <% if user_signed_in? && current_user.is_normal_user? %>
+    <div class="field">
+      <%= f.hidden_field :user_id, :value => current_user.id  %>
+    </div>
+   
+    <div class="field">
+      <%= f.label :puntuacion %><br>
+      <%= f.number_field :puntuacion %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  <% end %>
+<% end %>

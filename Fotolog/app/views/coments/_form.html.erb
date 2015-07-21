@@ -1,0 +1,31 @@
+<%= form_for([@foto,@coment]) do |f| %>
+  <% if @coment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@coment.errors.count, "error") %> prohibited this coment from being saved:</h2>
+
+      <ul>
+      <% @coment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <% if user_signed_in? %>
+    <%= f.hidden_field :anonimo, :value => current_user.email %>
+  <% else %>
+   <div class="field">
+    <%= f.label :Nombre %><br>
+    <%= f.text_field :anonimo %>
+  </div>
+  <% end %>
+
+
+  <div class="field">
+    <%= f.label :texto_comentario %><br>
+    <%= f.text_area :texto_comentario %>
+  </div>
+ 
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  fecha_foto: 2015-06-25 19:48:02
+  descripcion: MyText
+  n_comentarios: 1
+
+two:
+  user_id: 
+  fecha_foto: 2015-06-25 19:48:02
+  descripcion: MyText
+  n_comentarios: 1

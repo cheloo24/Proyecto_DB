@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  foto_id: 
+  user_id: 
+  fecha_comentario: 2015-07-06
+  texto_comentario: MyText
+  anonimo: MyString
+
+two:
+  foto_id: 
+  user_id: 
+  fecha_comentario: 2015-07-06
+  texto_comentario: MyText
+  anonimo: MyString

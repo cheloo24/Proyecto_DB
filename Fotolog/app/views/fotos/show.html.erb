@@ -1,0 +1,52 @@
+
+	<% unless @foto.user.nil? %>
+	<p>
+	  <strong>Publicado por :</strong>
+	  <%= @foto.user.email %>
+	</p>
+	<% end %>
+	<div class="field">
+		<%= image_tag @foto.imagen.url(:medium)%>
+	</div>
+	<p>
+	  <strong>Fecha foto:</strong>
+	  <%= @foto.fecha_foto %>
+	</p>
+
+	<p>
+	  <strong>Descripcion:</strong>
+	  <%= @foto.descripcion %>
+	</p>
+
+	<p>
+	  <strong>N comentarios:</strong>
+	  <%= @foto.n_comentarios %>
+	</p>
+
+	<p>
+	  <strong>Puntuacion:</strong>
+	  <%= @foto.puntuacion_total %>
+	</p>
+<% if user_signed_in? && @foto.user.email == current_user.email %>
+<%= link_to 'Edit', edit_foto_path(@foto) %> |
+<%= link_to 'Back', fotos_path %>
+<% end %>
+<div>
+	<h3>Evaluacion</h3>
+	<%= render "calificacions/form" %>
+
+</div>
+<div>
+	<h3>Comentarios</h3>	
+	<% if @foto.n_comentarios<20 %>
+	<%= render "coments/form" %>
+	<% end %>
+	<ul>
+		<% @foto.coments.each do |coment| %>
+		
+		<li><%= coment.anonimo %> - <%= coment.fecha_comentario %> - <%= coment.texto_comentario %>  </li>
+		<% end %>
+
+	</ul>
+</div>
+

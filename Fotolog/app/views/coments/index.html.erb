@@ -1,0 +1,27 @@
+<h1>Lista Comentarios</h1>
+
+<table >
+  <thead>
+    <tr>
+      <th>Id Foto </th>
+      <th>User</th>
+      <th>Fecha comentario</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+        <% @coments.each do |coment| %>
+
+        <td><%= coment.foto_id %></td>
+        <td><%= coment.anonimo %></td>
+        <td><%= coment.fecha_comentario %></td>
+        <td><%= link_to 'Eliminar', [coment.foto, coment], method: :delete, data: { confirm: 'Estas seguro?' } %></td>
+      </tr>
+        <% end %>
+
+  </tbody>
+</table>
+
+<br>
+

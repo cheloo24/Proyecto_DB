@@ -1,0 +1,27 @@
+<p>
+  <strong>Foto:</strong>
+  <%= @coment.foto %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @coment.user %>
+</p>
+
+<p>
+  <strong>Fecha comentario:</strong>
+  <%= @coment.fecha_comentario %>
+</p>
+
+<p>
+  <strong>Texto comentario:</strong>
+  <%= @coment.texto_comentario %>
+</p>
+
+<p>
+  <strong>Anonimo:</strong>
+  <%= @coment.anonimo %>
+</p>
+
+<%= link_to 'Edit', edit_coment_path(@coment) %> |
+<%= link_to 'Back', coments_path %>
